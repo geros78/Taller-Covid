@@ -79,33 +79,6 @@ data.loc[data['Tipo de contagio'] == 'comunitaria', 'Tipo de contagio'] = 'Comun
 
 
 
-
-
-# Cuantas mujeres fallecieron en Colombia
-aux = data.loc[(data['Estado'] == 'Fallecido') & (data['Sexo'] == 'F') ]
-cantidad_muertes_mujeres = aux.shape[0]
-
-# Cuantas personas fallecieron en Barranquilla
-aux = data.loc[(data['Estado'] == 'Fallecido') & (data['Nombre municipio'] == 'BARRANQUILLA') ]
-cantidad_muertes_BQ = aux.shape[0]
-
-# Cuantas mujeres fallecieron en Barranquilla
-aux = data.loc[(data['Estado'] == 'Fallecido') & (data['Sexo'] == 'F') & (data['Nombre municipio'] == 'BARRANQUILLA') ]
-cantidad_muertes_mj_BQ = aux.shape[0]
-
-
-
-# Curva de contagios en Barranquilila
-
-data[(data['Nombre municipio'] == 'BOGOTA') & (data['Estado'] == 'Fallecido')].groupby('Fecha de diagnóstico').size().plot()
-
-
-
-
-
-
-
-
 #TALLER
 
 
